@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": {
+    "cargo-audit": "latest",
+    "cargo-deny": "latest",
+    "cargo-outdated": "latest",
+    "just": "latest",
+    "prettier": "latest",
+    "rustup": "latest",
+    "shfmt": "latest",
+    "taplo": "latest",
+    "treefmt": "latest"
+  },
+  "env": {
+    "CARGO_HOME": "${DEVBOX_WD}/.devbox/.cargo",
+    "PATH": "${PATH}:${DEVBOX_WD}/bin:${DEVBOX_WD}/.devbox/.cargo/bin",
+    "RUSTUP_HOME": "${DEVBOX_WD}/.devbox/.rustup"
+  },
+  "shell": {
+    "init_hook": ["unset DEVELOPER_DIR"]
+  }
+}
